@@ -53,6 +53,8 @@ public class Stepdefs {
         io = new StubIO(inputLines);
         app = new App(io, auth);
         app.run();
+        
+        assertTrue((io.getPrints().contains("new user not registered")) || (io.getPrints().contains("new user registered")));
     }
 
 }

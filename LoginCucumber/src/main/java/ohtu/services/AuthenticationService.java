@@ -43,7 +43,7 @@ public class AuthenticationService {
             return true;
         }
         
-        if (password.length() < 8 /*|| !(password.contains("[0-9]"))*/) {
+        if (password.length() < 8 || !password.matches(".*\\d+.*")) {
             return true;
         }
 
